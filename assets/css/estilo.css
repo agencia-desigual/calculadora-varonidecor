@@ -67,3 +67,61 @@ html
 {
     min-height: 100vh;
 }
+
+.btn-continuar
+{
+    background: #06cc84;
+    width: 100%;
+    border: 2px solid;
+    color: #fff;
+    font-weight: bold;
+}
+.btn-continuar:hover
+{
+    background: #fff;
+    width: 100%;
+    border: 2px solid #06cc84;
+    color: #06cc84;
+}
+
+.sidebar p
+{
+    margin-bottom: 0px !important;
+}
+
+.sidebar #parede1,
+.sidebar #parede2,
+.sidebar #parede3,
+.sidebar #parede4
+{
+    display: none;
+}
+
+.sidebar #porta1,
+.sidebar #porta2,
+.sidebar #porta3,
+.sidebar #porta4,
+.sidebar #porta5,
+.sidebar #porta6,
+.sidebar #porta7,
+.sidebar #porta8,
+.sidebar #porta9,
+.sidebar #porta10
+{
+    display: none;
+}
+
+
+.sidebar #janela1,
+.sidebar #janela2,
+.sidebar #janela3,
+.sidebar #janela4,
+.sidebar #janela5,
+.sidebar #janela6,
+.sidebar #janela7,
+.sidebar #janela8,
+.sidebar #janela9,
+.sidebar #janela10
+{
+    display: none;
+}
