@@ -1,0 +1,25 @@
+/*
+==================================================
+               SITE
+==================================================
+*/
+@media only screen and (max-width: 991px)
+{
+    .owl-carousel-3 .imagebox .style4
+    {
+        height: 380px !important;
+    }
+}
+
+@media only screen and (max-width: 767px)
+{
+    .form-register
+    {
+        height: auto !important;
+    }
+
+    .padding-cartao .card-checkout
+    {
+        padding: 10px 3px 10px;
+    }
+}
