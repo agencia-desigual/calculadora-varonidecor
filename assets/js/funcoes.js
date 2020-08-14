@@ -31,6 +31,10 @@ $("#quantideParede").change(function () {
     for (i = 1; i <= quantideParede; i++)
     {
         $("#parede"+i).css("display","flex");
+
+        // Passando para IMG
+        $("#parede_"+i+"_altura").css('display','block');
+        $("#parede_"+i+"_largura").css('display','block');
     }
 
 });
@@ -131,6 +135,10 @@ $("#formQuantidadeParedes").on("submit", function () {
         var parede_1_altura = form.get("parede_1_altura");
         var parede_1_largura = form.get("parede_1_largura");
         var calculo_parede_1 = parede_1_altura * parede_1_largura;
+
+        // Passando para IMG
+        $("#parede_1_altura").html(parede_1_altura + "m");
+        $("#parede_1_largura").html(parede_1_largura + "m");
     }
 
 
@@ -143,6 +151,10 @@ $("#formQuantidadeParedes").on("submit", function () {
         var parede_2_altura = form.get("parede_2_altura");
         var parede_2_largura = form.get("parede_2_largura");
         var calculo_parede_2 = parede_2_altura * parede_2_largura;
+
+        // Passando para IMG
+        $("#parede_2_altura").html(parede_2_altura + "m");
+        $("#parede_2_largura").html(parede_2_largura + "m");
     }
 
 
@@ -155,6 +167,10 @@ $("#formQuantidadeParedes").on("submit", function () {
         var parede_3_altura = form.get("parede_3_altura");
         var parede_3_largura = form.get("parede_3_largura");
         var calculo_parede_3 = parede_3_altura * parede_3_largura;
+
+        // Passando para IMG
+        $("#parede_3_altura").html(parede_3_altura + "m");
+        $("#parede_3_largura").html(parede_3_largura + "m");
     }
 
 
@@ -167,6 +183,10 @@ $("#formQuantidadeParedes").on("submit", function () {
         var parede_4_altura = form.get("parede_4_altura");
         var parede_4_largura = form.get("parede_4_largura");
         var calculo_parede_4 = parede_4_altura * parede_4_largura;
+
+        // Passando para IMG
+        $("#parede_4_altura").html(parede_4_altura + "m");
+        $("#parede_4_largura").html(parede_4_largura + "m");
     }
 
 
