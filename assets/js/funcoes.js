@@ -49,7 +49,7 @@ $("#quantidadePortas").change(function () {
 
     // Pegando a quantidade selecionada
     var quantidePortas = $(this).val();
-    Dados.quantidePortas = $(this).val();
+    Dados.quantidadePortas = $(this).val();
     var i = 1;
 
     $("#porta1").css("display","none");
@@ -81,7 +81,7 @@ $("#quantidadeJanelas").change(function () {
 
     // Pegando a quantidade selecionada
     var quantideJanelas = $(this).val();
-    Dados.quantideJanelas = $(this).val();
+    Dados.quantidadeJanelas = $(this).val();
     var i = 1;
 
     $("#janela1").css("display","none");
@@ -137,8 +137,10 @@ $("#formQuantidadeParedes").on("submit", function () {
         var calculo_parede_1 = parede_1_altura * parede_1_largura;
 
         // Passando para IMG
-        $("#parede_1_altura").html(parede_1_altura + "m");
-        $("#parede_1_largura").html(parede_1_largura + "m");
+        $("#parede_1_altura").html("Altura: "+parede_1_altura + "m");
+        $("#parede_1_largura").html("Largura: "+parede_1_largura + "m");
+        $("#tamanho_parede_1").css("display","flex");
+
     }
 
 
@@ -153,8 +155,10 @@ $("#formQuantidadeParedes").on("submit", function () {
         var calculo_parede_2 = parede_2_altura * parede_2_largura;
 
         // Passando para IMG
-        $("#parede_2_altura").html(parede_2_altura + "m");
-        $("#parede_2_largura").html(parede_2_largura + "m");
+        $("#parede_2_altura").html("Altura: "+parede_2_altura + "m");
+        $("#parede_2_largura").html("Largura: "+parede_2_largura + "m");
+        $("#tamanho_parede_2").css("display","flex");
+
     }
 
 
@@ -169,8 +173,10 @@ $("#formQuantidadeParedes").on("submit", function () {
         var calculo_parede_3 = parede_3_altura * parede_3_largura;
 
         // Passando para IMG
-        $("#parede_3_altura").html(parede_3_altura + "m");
-        $("#parede_3_largura").html(parede_3_largura + "m");
+        $("#parede_3_altura").html("Altura: "+parede_3_altura + "m");
+        $("#parede_3_largura").html("Largura: "+parede_3_largura + "m");
+        $("#tamanho_parede_3").css("display","flex");
+
     }
 
 
@@ -185,8 +191,10 @@ $("#formQuantidadeParedes").on("submit", function () {
         var calculo_parede_4 = parede_4_altura * parede_4_largura;
 
         // Passando para IMG
-        $("#parede_4_altura").html(parede_4_altura + "m");
-        $("#parede_4_largura").html(parede_4_largura + "m");
+        $("#parede_4_altura").html("Altura: "+parede_4_altura + "m");
+        $("#parede_4_largura").html("Largura: "+parede_4_largura + "m");
+        $("#tamanho_parede_4").css("display","flex");
+
     }
 
 
@@ -203,7 +211,7 @@ $("#formQuantidadeParedes").on("submit", function () {
         $("#paredes").css("display","none");
         $("#portas").css("display","block");
 
-    },1000);
+    },800);
 
     // Não atualiza mesmo
     return false;
@@ -353,7 +361,22 @@ $("#formQuantidadePortas").on("submit", function () {
         $("#portas").css("display","none");
         $("#janelas").css("display","block");
 
-    },1000);
+    },500);
+
+
+    if (Dados.quantidadePortas > 0 || Dados.quantidadePortas > "0")
+    {
+        if (Dados.quantidadePortas === 1 || Dados.quantidadePortas === "1")
+        {
+            $("#qtdePorta").html(Dados.quantidadePortas+" porta");
+        }
+        else
+        {
+            $("#qtdePorta").html(Dados.quantidadePortas+" portas");
+        }
+
+        $("#quantidadePorta").fadeIn(800)
+    }
 
     // Não atualiza mesmo
     return false;
@@ -489,24 +512,48 @@ $("#formQuantidadeJanelas").on("submit", function () {
         var calculo_janela_10 = janela_10_altura * janela_10_largura;
     }
 
+    if (Dados.quantidadeJanelas > 0 || Dados.quantidadeJanelas > "0")
+    {
+        if (Dados.quantidadeJanelas === 1 || Dados.quantidadeJanelas === "1")
+        {
+            $("#qtdeJanela").html(Dados.quantidadeJanelas+" janela");
+        }
+        else
+        {
+            $("#qtdeJanela").html(Dados.quantidadeJanelas+" janelas");
+        }
+
+        $("#quantidadeJanela").fadeIn(800)
+    }
+
     // SOMANDO OS CALCULOS
     metragemJanelas = calculo_janela_1 + calculo_janela_2 + calculo_janela_3 + calculo_janela_4 + calculo_janela_5 + calculo_janela_6 + calculo_janela_7 + calculo_janela_8 + calculo_janela_9 + calculo_janela_10;
     Dados.metragemJanelas = metragemJanelas;
 
     var resultado = CalculaMetragem();
 
-    alert(resultado);
+    if (resultado > 0)
+    {
+        $("#metragemTotal").html(resultado+"m²")
+    }
+    else
+    {
 
-    setTimeout(function () {
+        Swal.fire({
+            title: 'Oops...',
+            text: 'Houve um erro, faça o cálculo novamente',
+            icon: 'error',
+            confirmButtonColor: '#f0a47e ',
+            confirmButtonText: 'Calcular novamente!'
+        }).then((result) => {
+            if (result.value)
+            {
+                location.reload();
+            }
+        })
 
-        // Bloqueia o Form
-        $(this).removeClass("bloqueiaForm");
+    }
 
-        $("#paredes").css("display","none");
-        $("#portas").css("display","none");
-        $("#janelas").css("display","none");
-
-    },1000);
 
     // Não atualiza mesmo
     return false;

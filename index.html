@@ -15,8 +15,6 @@
     <!-- CSS - Alertify -->
     <link rel="stylesheet" href="assets/css/alertify.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
     <title>VaroniDecor - Calculdora</title>
 
 </head>
@@ -28,386 +26,399 @@
                 <div class="col-md-4">
                     <div class="sidebar centraliza-itens-sem-text">
 
-                        <div id="paredes" style="display: block">
-                            <form id="formQuantidadeParedes">
-                                <div class="container">
+                        <div>
+                            <img class="logo" src="assets/img/logo.png">
 
-                                    <div class="input-group mb-3">
-                                        <label>Quantidade de parede</label>
-                                        <small>Informe quantas paredes você ira usar o papel de parede</small>
-                                        <select class="custom-select" name="quantidadeQuartos" id="quantideParede">
+                            <div id="paredes" style="display: block">
+                                <form id="formQuantidadeParedes">
+                                    <div class="container">
+
+                                        <div class="input-group mb-3">
+                                            <h3>Quantidade de parede</h3>
+                                            <small class="mb-2">Informe quantas paredes você ira usar o papel de parede</small>
+                                            <select class="custom-select" name="quantidadeQuartos" id="quantideParede">
+                                                <option selected disabled>Selecione</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+
+                                        <div id="parede1" class="row">
+                                            <div class="col-12"><p>Parede 1</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='parede_1_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='parede_1_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="parede2" class="row">
+                                            <div class="col-12"><p>Parede 2</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='parede_2_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='parede_2_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="parede3" class="row">
+                                            <div class="col-12"><p>Parede 3</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='parede_3_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='parede_3_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="parede4" class="row">
+                                            <div class="col-12"><p>Parede 4</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='parede_4_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='parede_4_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary btn-continuar">Continuar</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="portas" style="display: none">
+                                <form id="formQuantidadePortas">
+                                    <div class="container">
+
+                                        <div class="input-group mb-3">
+                                            <h3>Possui portas?</h3>
+                                            <small class="mb-2">Você tem alguma porta em algumas das paredes</small>
+                                        </div>
+
+                                        <div class="input-group">
+                                            <small>Quantidade de portas</small>
+                                        </div>
+                                        <select class="custom-select" name="quantidadePortas" id="quantidadePortas">
                                             <option selected disabled>Selecione</option>
+                                            <option value="0">0</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
                                         </select>
-                                    </div>
 
-                                    <div id="parede1" class="row">
-                                        <div class="col-12"><p>Parede 1</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='parede_1_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='parede_1_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <div id="parede2" class="row">
-                                        <div class="col-12"><p>Parede 2</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='parede_2_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='parede_2_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <div id="parede3" class="row">
-                                        <div class="col-12"><p>Parede 3</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='parede_3_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='parede_3_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <div id="parede4" class="row">
-                                        <div class="col-12"><p>Parede 4</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='parede_4_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='parede_4_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <button type="submit" class="btn btn-primary btn-continuar">Continuar</button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div id="portas" style="display: none">
-                            <form id="formQuantidadePortas">
-                                <div class="container">
-
-                                    <div class="input-group mb-3">
-                                        <label>Possui portas?</label>
-                                        <small>Você tem alguma porta em algumas das paredes</small>
-                                    </div>
-
-                                    <div class="input-group">
-                                        <small>Quantidade de portas</small>
-                                    </div>
-                                    <select class="custom-select" name="quantidadePortas" id="quantidadePortas">
-                                        <option selected disabled>Selecione</option>
-                                        <option value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-
-                                    <br><br><br>
-
-                                    <div id="porta1" class="row">
-                                        <div class="col-12"><p>Porta 1</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='porta_1_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='porta_1_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
                                         <br><br><br>
+
+                                        <div id="porta1" class="row">
+                                            <div class="col-12"><p>Porta 1</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='porta_1_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='porta_1_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                            <br><br><br>
+                                        </div>
+
+                                        <div id="porta2" class="row">
+                                            <div class="col-12"><p>Porta 2</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='porta_2_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='porta_2_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="porta3" class="row">
+                                            <div class="col-12"><p>Porta 3</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='porta_3_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='porta_3_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="porta4" class="row">
+                                            <div class="col-12"><p>Porta 4</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='porta_4_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='porta_4_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="porta5" class="row">
+                                            <div class="col-12"><p>Porta 5</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='porta_5_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='porta_5_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="porta6" class="row">
+                                            <div class="col-12"><p>Porta 6</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='porta_6_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='porta_6_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="porta7" class="row">
+                                            <div class="col-12"><p>Porta 7</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='porta_7_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='porta_7_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="porta8" class="row">
+                                            <div class="col-12"><p>Porta 8</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='porta_8_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='porta_8_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="porta9" class="row">
+                                            <div class="col-12"><p>Porta 9</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='porta_9_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='porta_9_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="porta10" class="row">
+                                            <div class="col-12"><p>Porta 10</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='porta_10_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='porta_10_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary btn-continuar">Continuar</button>
+
                                     </div>
+                                </form>
 
-                                    <div id="porta2" class="row">
-                                        <div class="col-12"><p>Porta 2</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='porta_2_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='porta_2_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
+                            </div>
 
-                                    <div id="porta3" class="row">
-                                        <div class="col-12"><p>Porta 3</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='porta_3_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='porta_3_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
+                            <div id="janelas" style="display: none">
+                                <form id="formQuantidadeJanelas">
+                                    <div class="container">
 
-                                    <div id="porta4" class="row">
-                                        <div class="col-12"><p>Porta 4</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='porta_4_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                        <div class="input-group mb-3">
+                                            <h3>Possui janelas?</h3>
+                                            <small class="mb-2">Você tem alguma janela em algumas das paredes</small>
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='porta_4_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
 
-                                    <div id="porta5" class="row">
-                                        <div class="col-12"><p>Porta 5</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='porta_5_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                        <div class="input-group">
+                                            <small>Quantidade de janelas</small>
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='porta_5_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
+                                        <select class="custom-select" name="quantidadeJanelas" id="quantidadeJanelas">
+                                            <option selected disabled>Selecione</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
 
-                                    <div id="porta6" class="row">
-                                        <div class="col-12"><p>Porta 6</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='porta_6_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='porta_6_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <div id="porta7" class="row">
-                                        <div class="col-12"><p>Porta 7</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='porta_7_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='porta_7_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <div id="porta8" class="row">
-                                        <div class="col-12"><p>Porta 8</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='porta_8_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='porta_8_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <div id="porta9" class="row">
-                                        <div class="col-12"><p>Porta 9</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='porta_9_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='porta_9_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <div id="porta10" class="row">
-                                        <div class="col-12"><p>Porta 10</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='porta_10_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='porta_10_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <button type="submit" class="btn btn-primary btn-continuar">Continuar</button>
-
-                                </div>
-                            </form>
-
-                        </div>
-
-                        <div id="janelas" style="display: none">
-                            <form id="formQuantidadeJanelas">
-                                <div class="container">
-
-                                    <div class="input-group mb-3">
-                                        <label>Possui janelas?</label>
-                                        <small>Você tem alguma janela em algumas das paredes</small>
-                                    </div>
-
-                                    <div class="input-group">
-                                        <small>Quantidade de janelas</small>
-                                    </div>
-                                    <select class="custom-select" name="quantidadeJanelas" id="quantidadeJanelas">
-                                        <option selected disabled>Selecione</option>
-                                        <option value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-
-                                    <br><br><br>
-
-                                    <div id="janela1" class="row">
-                                        <div class="col-12"><p>Janela 1</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='janela_1_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='janela_1_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
                                         <br><br><br>
+
+                                        <div id="janela1" class="row">
+                                            <div class="col-12"><p>Janela 1</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='janela_1_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='janela_1_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                            <br><br><br>
+                                        </div>
+
+                                        <div id="janela2" class="row">
+                                            <div class="col-12"><p>Janela 2</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='janela_2_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='janela_2_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="janela3" class="row">
+                                            <div class="col-12"><p>Janela 3</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='janela_3_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='janela_3_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="janela4" class="row">
+                                            <div class="col-12"><p>Janela 4</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='janela_4_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='janela_4_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="janela5" class="row">
+                                            <div class="col-12"><p>Janela 5</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='janela_5_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='janela_5_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="janela6" class="row">
+                                            <div class="col-12"><p>Janela 6</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='janela_6_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='janela_6_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="janela7" class="row">
+                                            <div class="col-12"><p>Janela 7</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='janela_7_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='janela_7_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="janela8" class="row">
+                                            <div class="col-12"><p>Janela 8</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='janela_8_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='janela_8_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="janela9" class="row">
+                                            <div class="col-12"><p>Janela 9</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='janela_9_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='janela_9_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <div id="janela10" class="row">
+                                            <div class="col-12"><p>Janela 10</p><hr></div>
+                                            <div class="form-group col-md-6">
+                                                <small>Altura(m)</small>
+                                                <input name='janela_10_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <small>Largura(m)</small>
+                                                <input name='janela_10_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary btn-continuar">Continuar</button>
+
                                     </div>
+                                </form>
+                            </div>
 
-                                    <div id="janela2" class="row">
-                                        <div class="col-12"><p>Janela 2</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='janela_2_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='janela_2_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <div id="janela3" class="row">
-                                        <div class="col-12"><p>Janela 3</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='janela_3_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='janela_3_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <div id="janela4" class="row">
-                                        <div class="col-12"><p>Janela 4</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='janela_4_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='janela_4_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <div id="janela5" class="row">
-                                        <div class="col-12"><p>Janela 5</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='janela_5_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='janela_5_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <div id="janela6" class="row">
-                                        <div class="col-12"><p>Janela 6</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='janela_6_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='janela_6_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <div id="janela7" class="row">
-                                        <div class="col-12"><p>Janela 7</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='janela_7_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='janela_7_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <div id="janela8" class="row">
-                                        <div class="col-12"><p>Janela 8</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='janela_8_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='janela_8_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <div id="janela9" class="row">
-                                        <div class="col-12"><p>Janela 9</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='janela_9_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='janela_9_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <div id="janela10" class="row">
-                                        <div class="col-12"><p>Janela 10</p><hr></div>
-                                        <div class="form-group col-md-6">
-                                            <small>Altura(m)</small>
-                                            <input name='janela_10_altura' type="tel" class="form-control maskValor" placeholder="Ex. 3.00">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <small>Largura(m)</small>
-                                            <input name='janela_10_largura' type="tel" class="form-control maskValor" placeholder="Ex. 5.00">
-                                        </div>
-                                    </div>
-
-                                    <button type="submit" class="btn btn-primary btn-continuar">Continuar</button>
-
-                                </div>
-                            </form>
+                            <div id="quantidadePorta">
+                                <img src="assets/img/porta.png">
+                                <h1 id="qtdePorta">0</h1>
+                            </div>
+                            <div id="quantidadeJanela">
+                                <img src="assets/img/janela.png">
+                                <h1 id="qtdeJanela">0</h1>
+                            </div>
                         </div>
 
                     </div>
@@ -415,15 +426,34 @@
                 <div class="col-md-8">
 
                     <!-- METRAGEM QUE VAI NAS PAREDES-->
-                    <div style="display: none" id="parede_1_altura"></div>
-                    <div style="display: none" id="parede_2_altura"></div>
-                    <div style="display: none" id="parede_3_altura"></div>
-                    <div style="display: none" id="parede_4_altura"></div>
-                    <div style="display: none" id="parede_1_largura"></div>
-                    <div style="display: none" id="parede_2_largura"></div>
-                    <div style="display: none" id="parede_3_largura"></div>
-                    <div style="display: none" id="parede_4_largura"></div>
+                    <div id="tamanho_parede_1">
+                         <span id="parede_1_altura"></span>&nbsp; x &nbsp;<span id="parede_1_largura"></span>
+                    </div>
 
+                    <div id="tamanho_parede_2">
+                        <span id="parede_2_altura"></span>&nbsp; x &nbsp;<span id="parede_2_largura"></span>
+                    </div>
+
+                    <div id="tamanho_parede_3">
+                        <span id="parede_3_altura"></span>&nbsp; x &nbsp;<span id="parede_3_largura"></span>
+                    </div>
+
+                    <div id="tamanho_parede_4">
+                        <span id="parede_4_altura"></span>&nbsp; x &nbsp;<span id="parede_4_largura"></span>
+                    </div>
+
+                    <div class="parede3d centraliza-itens-sem-text">
+                        <img src="assets/img/parede.png">
+                    </div>
+
+                    <img class="icone" src="assets/img/icone.png">
+
+                </div>
+                <div class="col-12 centraliza-itens">
+                    <div class="resultado">
+                        <h3>A sua metragem total é de <b id="metragemTotal"></b></h3>
+                        <h3>a Varoni decor recomenda a você utilizar x folhas de papel de parede.</h3>
+                    </div>
                 </div>
             </div>
         </div>

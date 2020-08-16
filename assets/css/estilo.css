@@ -1,6 +1,30 @@
-html
+@import "fonte.css";
+
+p,b,small,input,a
 {
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Galano', sans-serif !important;
+    color: #717171 !important;
+}
+
+select,input
+{
+    color: #f0a47e !important;
+    border: 2px solid #717171 !important;
+    font-family: 'Galano', sans-serif !important;
+    padding: 0px 15px !important;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Jazmin', sans-serif !important;
+    color: #717171 !important;
+}
+
+body
+{
+    background-image: url('../img/bg.png');
+    background-position-x: -500px;
+    background-repeat: no-repeat;
 }
 
 .centraliza-itens
@@ -63,6 +87,11 @@ html
 ==================================================
 */
 
+hr
+{
+    border-top: 1px solid #f0a47e !important;
+}
+
 .calculadora .sidebar
 {
     min-height: 100vh;
@@ -70,23 +99,29 @@ html
 
 .btn-continuar
 {
-    background: #06cc84;
+    background: transparent;
     width: 100%;
     border: 2px solid;
-    color: #fff;
+    color: #717171;
     font-weight: bold;
 }
 .btn-continuar:hover
 {
     background: #fff;
     width: 100%;
-    border: 2px solid #06cc84;
-    color: #06cc84;
+    border: 2px solid #f0a47e;
+    color: #f0a47e !important;
 }
 
 .sidebar p
 {
     margin-bottom: 0px !important;
+}
+
+.sidebar .logo
+{
+    width: 100%;
+    margin-top: -100%;
 }
 
 .sidebar #parede1,
@@ -95,6 +130,13 @@ html
 .sidebar #parede4
 {
     display: none;
+}
+
+.icone
+{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
 
 .sidebar #porta1,
@@ -124,4 +166,85 @@ html
 .sidebar #janela10
 {
     display: none;
+}
+
+
+/*
+==================================================
+                  PAREDE 3D
+==================================================
+*/
+
+.parede3d
+{
+    min-height: 100vh;
+}
+
+.parede3d img
+{
+    width: 100%;
+    margin-top: 20%;
+}
+
+#tamanho_parede_1
+{
+    display: none;
+    text-align: center;
+    position: absolute;
+    right: 52%;
+    top: 32%;
+    font-weight: 900;
+    transform: rotate(-17deg);
+    color: #717171 !important;
+}
+
+#tamanho_parede_2
+{
+    display: none;
+    text-align: center;
+    position: absolute;
+    right: 5%;
+    top: 33%;
+    font-weight: 900;
+    transform: rotate(23deg);
+    color: #717171 !important;
+}
+
+#tamanho_parede_3
+{
+    display: none;
+    text-align: center;
+    position: absolute;
+    right: 5%;
+    top: 76%;
+    font-weight: 900;
+    transform: rotate(-29deg);
+    color: #717171 !important;
+}
+
+#tamanho_parede_4
+{
+    display: none;
+    text-align: center;
+    position: absolute;
+    right: 62%;
+    top: 74%;
+    font-weight: 900;
+    transform: rotate(42deg);
+    color: #717171 !important;
+}
+
+#quantidadeJanela,
+#quantidadePorta
+{
+    display: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#quantidadeJanela h1,
+#quantidadePorta h1
+{
+    display: inline;
+    margin-left: 20px;
 }
