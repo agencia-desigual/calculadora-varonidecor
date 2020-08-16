@@ -136,10 +136,13 @@ $("#formQuantidadeParedes").on("submit", function () {
         var parede_1_largura = form.get("parede_1_largura");
         var calculo_parede_1 = parede_1_altura * parede_1_largura;
 
-        // Passando para IMG
-        $("#parede_1_altura").html("Altura: "+parede_1_altura + "m");
-        $("#parede_1_largura").html("Largura: "+parede_1_largura + "m");
-        $("#tamanho_parede_1").css("display","flex");
+        if (calculo_parede_1 > 0)
+        {
+            // Passando para IMG
+            $("#parede_1_altura").html("Altura: "+parede_1_altura + "m");
+            $("#parede_1_largura").html("Largura: "+parede_1_largura + "m");
+            $("#tamanho_parede_1").css("display","flex");
+        }
 
     }
 
@@ -154,10 +157,13 @@ $("#formQuantidadeParedes").on("submit", function () {
         var parede_2_largura = form.get("parede_2_largura");
         var calculo_parede_2 = parede_2_altura * parede_2_largura;
 
-        // Passando para IMG
-        $("#parede_2_altura").html("Altura: "+parede_2_altura + "m");
-        $("#parede_2_largura").html("Largura: "+parede_2_largura + "m");
-        $("#tamanho_parede_2").css("display","flex");
+        if (calculo_parede_2 > 0)
+        {
+            // Passando para IMG
+            $("#parede_2_altura").html("Altura: "+parede_2_altura + "m");
+            $("#parede_2_largura").html("Largura: "+parede_2_largura + "m");
+            $("#tamanho_parede_2").css("display","flex");
+        }
 
     }
 
@@ -172,10 +178,13 @@ $("#formQuantidadeParedes").on("submit", function () {
         var parede_3_largura = form.get("parede_3_largura");
         var calculo_parede_3 = parede_3_altura * parede_3_largura;
 
-        // Passando para IMG
-        $("#parede_3_altura").html("Altura: "+parede_3_altura + "m");
-        $("#parede_3_largura").html("Largura: "+parede_3_largura + "m");
-        $("#tamanho_parede_3").css("display","flex");
+        if (calculo_parede_3 > 0)
+        {
+            // Passando para IMG
+            $("#parede_3_altura").html("Altura: "+parede_3_altura + "m");
+            $("#parede_3_largura").html("Largura: "+parede_3_largura + "m");
+            $("#tamanho_parede_3").css("display","flex");
+        }
 
     }
 
@@ -190,10 +199,13 @@ $("#formQuantidadeParedes").on("submit", function () {
         var parede_4_largura = form.get("parede_4_largura");
         var calculo_parede_4 = parede_4_altura * parede_4_largura;
 
-        // Passando para IMG
-        $("#parede_4_altura").html("Altura: "+parede_4_altura + "m");
-        $("#parede_4_largura").html("Largura: "+parede_4_largura + "m");
-        $("#tamanho_parede_4").css("display","flex");
+        if (calculo_parede_4 > 0)
+        {
+            // Passando para IMG
+            $("#parede_4_altura").html("Altura: "+parede_4_altura + "m");
+            $("#parede_4_largura").html("Largura: "+parede_4_largura + "m");
+            $("#tamanho_parede_4").css("display","flex");
+        }
 
     }
 
@@ -202,6 +214,9 @@ $("#formQuantidadeParedes").on("submit", function () {
     // SOMANDO OS CALCULOS
     metragemParedes = calculo_parede_1 + calculo_parede_2 + calculo_parede_3 + calculo_parede_4;
     Dados.metragemParedes = metragemParedes;
+
+    // Mostrando a parede 3d
+    $(".parede3d").css("display","flex");
 
     setTimeout(function () {
 
@@ -534,7 +549,26 @@ $("#formQuantidadeJanelas").on("submit", function () {
 
     if (resultado > 0)
     {
-        $("#metragemTotal").html(resultado+"m²")
+        var aux = resultado;
+        resultado = resultado.toFixed(2);
+        var qtdePapel = Math.ceil(aux);
+
+        $("#metragemTotal").html(resultado+"m²");
+        $("#qtdePapel").html(qtdePapel);
+
+        // Bloqueia o Form
+        $(this).removeClass("bloqueiaForm");
+
+        setTimeout(function () {
+
+            $("#paredes").css("display","none");
+            $("#portas").css("display","none");
+            $("#janelas").css("display","none");
+            $(".remover").css("display","none");
+
+            $(".resultado").css("display","flex");
+
+        },1000);
     }
     else
     {
