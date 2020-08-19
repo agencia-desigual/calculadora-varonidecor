@@ -7,7 +7,8 @@ var Dados = {
     "metragemJanelas" : "0"
 };
 
-$(".maskValor").mask("###0.00", {reverse: true});
+$('.maskValor').maskMoney();
+// $(".maskValor").mask("###0.00", {reverse: true});
 
 
 
